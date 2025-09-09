@@ -29,7 +29,7 @@ function App() {
       <h1> Fabric Network Simulation </h1>
 
       <div className="card">
-        <h2>Invoke Transaction</h2>
+        <h2>Create Transaction</h2>
         <input id="key" placeholder="Enter Key" />
         <input id="value" placeholder="Enter Value" />
         <button
@@ -40,7 +40,7 @@ function App() {
             )
           }
         >
-          Invoke
+          Create
         </button>
       </div>
 
