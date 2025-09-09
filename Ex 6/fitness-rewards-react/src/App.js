@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import RewardsSystem from "./components/RewardsSystem";
+// import RewardsSystem from "./components/RewardsSystem"; 
+import FitnessRewardsContract from "./components/FitnessRewardsContract"; 
 import "./styles.css";
 
-const rewards = new RewardsSystem();
+
+const rewards = new FitnessRewardsContract();
 
 function App() {
   const [members, setMembers] = useState([]);
@@ -35,7 +37,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1> Fitness Club Rewards </h1>
+      <h1> Fitness Rewards Smart Contract </h1>
       <p>{msg}</p>
 
       <div className="card">
@@ -52,7 +54,7 @@ function App() {
       </div>
 
       <div className="card">
-        <h2>Check Points</h2>
+        <h2>Check Member Points</h2>
         <input id="cid" placeholder="Member ID" />
         <button onClick={handleCheckPoints}>Check</button>
       </div>
@@ -62,14 +64,14 @@ function App() {
         <ul>
           {members.map((m) => (
             <li key={m.id}>
-              Member ID: {m.id}, Points: {m.points}
+              Member ID: {m.id}, Points: {m.points}, Reward: {m.reward}
             </li>
           ))}
         </ul>
       </div>
 
       <div className="card">
-        <h2>Action Logs</h2>
+        <h2>Smart Contract Logs</h2>
         <ul>
           {logs.map((l, i) => (
             <li key={i}>{l}</li>
